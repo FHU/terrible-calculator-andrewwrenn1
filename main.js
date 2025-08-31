@@ -13,9 +13,23 @@ function calculate() {
     const num2 = parseFloat(num2Input.value)
     const operator = operatorSelect.value;
 
+    if(isNaN(num1) || isNaN(2)) {
+        errorMessage.innerText = "Please enter both numbers"
+        resultSpan.innerText = ""
+    }
+
     let result
     if( operator === "+") {
         result = num1 + num2
+    }
+    if( operator === "-") {
+        result = num1 - num2
+    }
+    if( operator === "*") {
+        result = num1 * num2
+    }
+    if( operator === "/") {
+        result = num1 / num2
     }
     
     // Step 3 - update the result span with the result of the calculation
